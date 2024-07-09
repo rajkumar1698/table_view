@@ -67,6 +67,25 @@ view: flights {
     type: number
     sql: ${TABLE}.taxi_out ;;
   }
+   parameter: period_range {
+    label: "2: Number of Previous Periods"
+    description: "Required for Period over Period. Select how many previous periods to visualize."
+    type: number
+    default_value: "4"
+    allowed_value:{label: "0" value: "0"}
+    allowed_value:{label: "1" value: "1"}
+    allowed_value:{label: "2" value: "2"}
+    allowed_value:{label: "3" value: "3"}
+    allowed_value:{label: "4" value: "4"}
+    allowed_value:{label: "5" value: "5"}
+    allowed_value:{label: "6" value: "6"}
+    allowed_value:{label: "7" value: "7"}
+    allowed_value:{label: "8" value: "8"}
+    allowed_value:{label: "9" value: "9"}
+    allowed_value:{label: "10" value: "10"}
+    allowed_value:{label: "11" value: "11"}
+    allowed_value:{label: "12" value: "12"}
+  }
   measure: count {
     type: count
   }
