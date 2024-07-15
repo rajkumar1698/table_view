@@ -67,11 +67,16 @@ view: flights {
     type: number
     sql: ${TABLE}.taxi_out ;;
   }
+  dimension: parameter_value {
+    type: number
+    sql: {% parameter period_range %} ;;
+  }
+
    parameter: period_range {
     label: "2: Number of Previous Periods"
     description: "Required for Period over Period. Select how many previous periods to visualize."
     type: number
-    default_value: "4"
+    default_value: "1"
     allowed_value:{label: "0" value: "0"}
     allowed_value:{label: "1" value: "1"}
     allowed_value:{label: "2" value: "2"}
